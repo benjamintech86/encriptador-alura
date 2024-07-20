@@ -1,5 +1,5 @@
 const palabraInput = document.getElementById("palabra");
-const resultadoParrafo = document.getElementById("resultado");
+const palabraEncriptadaInput = document.getElementById("palabraEncriptada");
 
 function encriptar() {
     const palabra = palabraInput.value.toLowerCase();
@@ -8,15 +8,5 @@ function encriptar() {
                                     .replace(/i/g, "imes")
                                     .replace(/o/g, "ober")
                                     .replace(/u/g, "ufat");
-    resultadoParrafo.textContent = "Palabra encriptada: " + palabraEncriptada;
-}
-
-function desencriptar() {
-    const palabraEncriptada = palabraInput.value.toLowerCase();
-    const palabraDesencriptada = palabraEncriptada.replace(/ai/g, "a")
-                                                .replace(/enter/g, "e")
-                                                .replace(/imes/g, "i")
-                                                .replace(/ober/g, "o")
-                                                .replace(/ufat/g, "u");
-    resultadoParrafo.textContent = "Palabra desencriptada: " + palabraDesencriptada;
+    palabraEncriptadaInput.value = palabraEncriptada;
 }
