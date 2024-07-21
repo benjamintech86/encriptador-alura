@@ -3,23 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encriptador de Palabras</title>
+    <title>Encriptador de Texto</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Encriptador de Palabras</h1>
+    <h1>Encriptador de Texto</h1>
 
     <div class="contenedor">
-        <label for="palabra">Palabra a encriptar:</label>
-        <input type="text" id="palabra" placeholder="Ingrese la palabra">
+        <div class="entrada">
+            <label for="texto">Texto a Encriptar:</label>
+            <input type="text" id="texto" placeholder="Ingrese su texto">
+        </div>
 
-        <button onclick="encriptar()">Encriptar</button>
+        <div class="botones">
+            <button id="btnEncriptar">Encriptar</button>
+            <button id="btnDesencriptar">Desencriptar</button>
+        </div>
 
-        <label for="palabraEncriptada">Palabra encriptada:</label>
-        <input type="text" id="palabraEncriptada" readonly>
+        <div class="salida">
+            <label for="textoEncriptado">Texto Encriptado:</label>
+            <input type="text" id="textoEncriptado" readonly>
+        </div>
     </div>
 
     <script src="script.js"></script>
 </body>
 </html>
+
 
