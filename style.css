@@ -1,34 +1,43 @@
 body {
     font-family: sans-serif;
-    margin: 0;
-    padding: 20px;
+    margin: 20px;
 }
 
 .contenedor {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
+}
+
+.entrada, .salida {
+    margin-bottom: 10px;
 }
 
 label {
+    display: block;
     margin-bottom: 5px;
 }
 
-input {
+input[type="text"] {
+    width: 300px;
     padding: 5px;
     border: 1px solid #ccc;
-    width: 200px;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
 }
 
 button {
-    padding: 5px 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
     border: none;
     cursor: pointer;
-    margin-top: 10px;
 }
 
-#resultado {
-    margin-top: 10px;
-    font-weight: bold;
+button:hover {
+    background-color: #0056b3;
 }
