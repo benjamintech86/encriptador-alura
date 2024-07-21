@@ -1,12 +1,21 @@
-const palabraInput = document.getElementById("palabra");
-const palabraEncriptadaInput = document.getElementById("palabraEncriptada");
+const textoInput = document.getElementById('texto');
+const textoEncriptadoInput = document.getElementById('textoEncriptado');
+const btnEncriptar = document.getElementById('btnEncriptar');
+const btnDesencriptar = document.getElementById('btnDesencriptar');
 
-function encriptar() {
-    const palabra = palabraInput.value.toLowerCase();
-    const palabraEncriptada = palabra.replace(/a/g, "ai")
-                                    .replace(/e/g, "enter")
-                                    .replace(/i/g, "imes")
-                                    .replace(/o/g, "ober")
-                                    .replace(/u/g, "ufat");
-    palabraEncriptadaInput.value = palabraEncriptada;
+function encriptarTexto() {
+    const texto = textoInput.value;
+    // Implementar algoritmo de encriptación aquí (por ejemplo, César, Base64, etc.)
+    const textoEncriptado = "Texto Encriptado"; // Reemplazar con el texto encriptado
+    textoEncriptadoInput.value = textoEncriptado;
 }
+
+function desencriptarTexto() {
+    const textoEncriptado = textoEncriptadoInput.value;
+    // Implementar algoritmo de desencriptación aquí (inverso al de encriptación)
+    const texto = "Texto Descifrado"; // Reemplazar con el texto descifrado
+    textoInput.value = texto;
+}
+
+btnEncriptar.addEventListener('click', encriptarTexto);
+btnDesencriptar.addEventListener('click', desencriptarTexto);
